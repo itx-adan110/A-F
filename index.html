@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0B141A">
+  <meta name="description" content="Syed Adan Abbas — Frontend Developer">
+  <title>Syed Adan Abbas — Frontend Developer</title>
+
+  <!-- Critical visual assets: preload so the first viewport does not wait for them. -->
+  <link rel="preload" as="image" href="pfp.png" fetchpriority="high">
+  <link rel="preload" as="image" href="Commonly.png">
+  <link rel="preload" as="image" href="Luminai.png">
+  <link rel="preload" as="image" href="Showroom.png">
+  <link rel="preload" as="image" href="Commonly.png">
+  <link rel="preload" as="image" href="Luminai.png">
+  <link rel="preload" as="image" href="Showroom.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar" aria-label="Primary navigation">
+    <a class="brand" href="#home" data-scroll="#home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>SYED ADAN ABBAS</span></a>
+    <div class="nav-wrap">
+      <div class="nav-links" id="navLinks">
+        <a href="#home" data-scroll="#home">Home</a>
+        <a href="#about" data-scroll="#about">About</a>
+        <a href="#skills" data-scroll="#skills">Skills</a>
+        <a href="#service" data-scroll="#service">Service</a>
+        <a href="#projects" data-scroll="#projects">Projects</a>
+        <a href="#contact" data-scroll="#contact">Contact</a>
+      </div>
+      <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <svg class="menu-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path class="menu-line menu-line-top" d="M4 7.5H20" />
+          <path class="menu-line menu-line-mid" d="M4 12H20" />
+          <path class="menu-line menu-line-bottom" d="M4 16.5H20" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-grid" aria-hidden="true"></div>
+
+      <div class="hero-syed-side">
+        <span class="hero-role">FRONTEND DEVELOPER</span>
+        <div class="hero-name hero-syed" data-text="Syed" aria-label="Syed">
+          <span>S</span><span>y</span><span>e</span><span>d</span>
+        </div>
+        <span class="name-line"></span>
+      </div>
+
+      <img class="hero-photo" src="pfp.png" alt="Syed Adan Abbas" width="680" height="760" fetchpriority="high">
+
+      <div class="hero-name hero-adan" data-text="Adan" aria-label="Adan">
+        <span>A</span><span>d</span><span>a</span><span>n</span>
+      </div>
+
+      <div class="hero-description">
+        <span>BUILDING CLEAN</span>
+        <span>AND MODERN WEB</span>
+        <span>EXPERIENCES</span>
+      </div>
+
+      <button class="scroll-down" data-scroll="#about" type="button">
+        <span class="mouse"><i></i></span><span>Scroll Down</span><b></b>
+      </button>
+
+      <div class="hero-pagination" aria-label="Section navigation">
+        <button class="page-dot active" data-scroll="#home" aria-label="Home"></button>
+        <button class="page-dot" data-scroll="#about" aria-label="About"></button>
+        <button class="page-dot" data-scroll="#skills" aria-label="Skills"></button>
+      </div>
+    </section>
+
+    <section class="about section-shell" id="about">
+      <div class="about-orbit" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="section-kicker">01 — ABOUT</div>
+      <div class="about-layout">
+        <div class="about-title-wrap">
+          <p class="eyebrow">IDENTITY / APPROACH</p>
+          <h2>I BUILD<br><em>CALM</em><br>INTERFACES.</h2>
+        </div>
+        <div class="about-system">
+          <div class="about-line"><span>01</span><b>FRONTEND DEVELOPMENT</b></div>
+          <div class="about-line"><span>02</span><b>RESPONSIVE INTERACTION</b></div>
+          <div class="about-line"><span>03</span><b>EXPERIMENTAL WEBGL</b></div>
+          <p>Turning ideas into responsive digital experiences with deliberate motion, clear structure and a human-made visual language.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills-section section-shell" id="skills">
+      <div class="section-kicker">02 — SKILLS</div>
+      <div class="skills-head">
+        <div>
+          <p class="eyebrow">INTERACTIVE SKILL FIELD</p>
+          <h2>EXPLORE<br><em>HOW I BUILD.</em></h2>
+        </div>
+        <p class="skills-intro">Move, drag or tap the field. Select a skill to bring it into focus.</p>
+      </div>
+
+      <div class="skill-stage" id="skillStage">
+        <canvas id="skillsWebGL" aria-label="Interactive 3D skills field"></canvas>
+        <div class="skill-axis skill-axis-x" aria-hidden="true"></div>
+        <div class="skill-axis skill-axis-y" aria-hidden="true"></div>
+        <div class="skill-hud hud-top">DRAG / MOVE / TAP</div>
+        <div class="skill-hud hud-bottom"><span id="skillCounter">01</span> / 06</div>
+        <div class="skill-detail" id="skillDetail" aria-live="polite">
+          <span class="detail-index" id="skillIndex">01</span>
+          <span class="detail-type">SKILL NODE</span>
+          <h3 id="skillName">HTML</h3>
+          <p id="skillDescription">Semantic structure, accessible markup and clean component foundations.</p>
+          <div class="detail-bar"><span id="skillBar"></span></div>
+          <small id="skillLevel">FOUNDATION</small>
+        </div>
+        <div class="skill-node-labels" id="skillLabels"></div>
+      </div>
+    </section>
+
+    <section class="service-section section-shell" id="service">
+      <div class="section-kicker">03 — SERVICE</div>
+      <div class="service-layout">
+        <div class="service-intro">
+          <p class="eyebrow">WHAT I CAN BUILD</p>
+          <h2>ONE IDEA.<br><em>MANY</em><br>INTERFACES.</h2>
+        </div>
+        <div class="service-map" id="serviceMap">
+          <button class="service-node active" data-service="web" type="button"><span>01</span>WEB</button>
+          <button class="service-node" data-service="ui" type="button"><span>02</span>UI / UX</button>
+          <button class="service-node" data-service="ai" type="button"><span>03</span>AI INTEGRATION</button>
+          <button class="service-node" data-service="motion" type="button"><span>04</span>INTERACTION</button>
+          <div class="service-core" aria-hidden="true"><span>BUILD</span></div>
+          <div class="service-info">
+            <span id="serviceIndex">01</span>
+            <h3 id="serviceName">WEB DEVELOPMENT</h3>
+            <p id="serviceDescription">Responsive, structured websites with thoughtful motion and fast interactions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-section section-shell" id="projects">
+      <div class="section-kicker">04 — PROJECTS</div>
+      <div class="projects-heading">
+        <div><p class="eyebrow">SELECTED WORK</p><h2>BUILT,<br><em>NOT DECORATED.</em></h2></div>
+        <p>Three different products, one consistent obsession with interaction.</p>
+      </div>
+
+      <div class="project-showcase" id="projectShowcase">
+        <button class="project-arrow project-arrow-prev" type="button" aria-label="Previous project">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 5.5 8 12l6.5 6.5"/></svg>
+        </button>
+
+        <article class="project-card" aria-live="polite">
+          <div class="project-copy">
+            <span class="project-type" id="projectType">FREELANCER MARKETPLACE</span>
+            <div class="project-number" id="projectNumber">01 / 03</div>
+            <h3 id="projectTitle">Commonly</h3>
+            <p id="projectDescription"></p>
+            <div class="project-tags" id="projectTags"></div>
+            <a class="project-view-button" id="projectViewButton" href="https://itx-110.github.io/Commonly" target="_blank" rel="noopener noreferrer">View Project <span>↗</span></a>
+          </div>
+          <div class="project-preview-wrap">
+            <div class="project-preview" id="projectPreview" tabindex="0" role="button" aria-label="Open interactive project preview">
+              <canvas id="projectWebGL" aria-hidden="true"></canvas>
+              <div class="project-preview-image"><img id="projectPreviewImage" src="Commonly.png" alt="Commonly project preview" width="900" height="650" decoding="async"></div>
+              <div class="project-preview-hint">TAP TO EXPLORE</div>
+            </div>
+          </div>
+        </article>
+
+        <button class="project-arrow project-arrow-next" type="button" aria-label="Next project">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9.5 5.5 6.5 6.5-6.5 6.5"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <section class="contact-section section-shell" id="contact">
+      <div class="section-kicker">05 — CONTACT</div>
+      <div class="contact-layout">
+        <div class="contact-copy">
+          <p class="eyebrow">LET'S CONNECT</p>
+          <h2>MAKE THE<br><em>NEXT</em><br>INTERFACE.</h2>
+          <p class="contact-note">Choose a channel below to start a conversation.</p>
+        </div>
+
+        <div class="contact-grid" aria-label="Contact methods">
+          <!-- Replace only the placeholder contact values when your real details are ready. -->
+          <a class="contact-card" href="mailto:hello@example.com">
+            <span class="contact-icon">✉</span><span class="contact-label">Email</span><span class="contact-action">↗</span>
+          </a>
+          <a class="contact-card" href="https://wa.me/" target="_blank" rel="noopener noreferrer">
+            <span class="contact-icon">◉</span><span class="contact-label">WhatsApp</span><span class="contact-action">↗</span>
+          </a>
+          <a class="contact-card" href="tel:+0000000000">
+            <span class="contact-icon">⌕</span><span class="contact-label">Phone</span><span class="contact-action">↗</span>
+          </a>
+          <a class="contact-card" href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
+            <span class="contact-icon">◎</span><span class="contact-label">Instagram</span><span class="contact-action">↗</span>
+          </a>
+          <a class="contact-card" href="https://facebook.com/" target="_blank" rel="noopener noreferrer">
+            <span class="contact-icon">f</span><span class="contact-label">Facebook</span><span class="contact-action">↗</span>
+          </a>
+        </div>
+      </div>
+      <footer><span>SYED ADAN ABBAS</span><span>© 2026 / ALL RIGHTS RESERVED</span></footer>
+    </section>
+  </main>
+
+  <div class="cursor-beam" aria-hidden="true"></div>
+  <button class="theme-toggle" type="button" aria-label="Switch to light theme">
+    <span class="theme-icon">☾</span><span class="theme-label">Dark</span>
+  </button>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
